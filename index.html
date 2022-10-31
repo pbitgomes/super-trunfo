@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Super Trunfo - GoT</title>
+  </head>
+  <body>
+    <article id="telaInicial">
+      <h1>Super Trunfo - Game of Thrones</h1>
+      <form>
+        <label>Qual é o seu nome?</label>
+        <input id="nomeJogador" type="text" placeholder="Digite o seu nome" />
+        <button id="btnJogar">Jogar!</button>
+      </form>
+    </article>
+
+    <article id="board" class="hide">
+        <p>
+            Para jogar, você deve clicar no botão "Sortear uma carta". Escolha com
+            qual atributo do personagem da carta sorteada você quer jogar e clique
+            no botão "Jogar!" Divirta-se!
+        </p>
+        <button id="btnsortear">Sortear uma carta!</button>
+        <section id="jogador">            
+            <form id="atributos">
+                <input type="radio">Força<span id="foca"></span><br/>
+                <input type="radio">inteligência <span id="inteligencia"></span><br/>
+                <input type="radio">Magia <span id="magia"></span><br/>
+                <button>Jogar!</button>
+            </form>
+        </section>
+
+        <section id="computador">
+
+        </section>
+
+        <section id="resultado">
+
+        </section>
+    </article>
+
+    <script src="./js/logic.js"></script>
+    <script src="./js/dom.js"></script>
+  </body>
+</html>

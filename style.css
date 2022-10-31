@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Garamond', sans-serif;
+}
+
+body {
+    background-color: #FBFBFF;
+    font-family: 'Garamond', sans-serif;
+}
+
+article {
+    display: flex;
+    flex-direction: column;  /* row é padrão */
+    justify-content: center; /* mover ele no eixo X */
+    align-items: center; /* mover ele no eixo Y */
+    height: 100vh;
+}
+
+.hide {
+    display: none;
+}

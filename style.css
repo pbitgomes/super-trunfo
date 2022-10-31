@@ -8,6 +8,10 @@
 body {
     background-color: #FBFBFF;
     font-family: 'Garamond', sans-serif;
+    /* background-image: url("https://upload.wikimedia.org/wikipedia/pt/thumb/a/a0/GameofThrones.png/375px-GameofThrones.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat; */
 }
 
 article {
@@ -18,6 +22,64 @@ article {
     height: 100vh;
 }
 
+h1 {
+    background-color: #6A8D73;
+    margin: 20px 0;
+    font-size: 3rem;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#telaInicial, #board {
+    background-image: url("https://upload.wikimedia.org/wikipedia/pt/a/a0/GameofThrones.png");
+    background-size: cover;
+}
+
+form, p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #6A8D73;
+    padding: 30px 40px;
+    border-radius: 10px;
+}
+
+form>input, form>label {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+button {
+    border: none;
+    text-transform: uppercase;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #272932;
+    color: #FBFBFF;
+    cursor: pointer;
+}
+
+article p {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 10px;
+}
+
 .hide {
     display: none;
+}
+
+img {
+    height: 300px;
+    margin: 20px;
+    border-radius: 15px;
 }

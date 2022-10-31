@@ -9,32 +9,34 @@
   </head>
   <body>
     <article id="telaInicial">
-      <h1>Super Trunfo - Game of Thrones</h1>
+      <h1>Super Trunfo | Game of Thrones</h1>
       <form>
         <label>Qual é o seu nome?</label>
-        <input id="nomeJogador" type="text" placeholder="Digite o seu nome" />
+        <input id="inputNomeJogador" type="text" placeholder="Digite o seu nome" />
         <button id="btnJogar">Jogar!</button>
       </form>
     </article>
 
     <article id="board" class="hide">
+        <p>Olá, <span id="nomeJogador"></span>!</p>
         <p>
-            Para jogar, você deve clicar no botão "Sortear uma carta". Escolha com
+            Para jogar, você deve clicar no botão "Sortear uma carta!". <br/>Escolha com
             qual atributo do personagem da carta sorteada você quer jogar e clique
-            no botão "Jogar!" Divirta-se!
+            no botão "Jogar!" <br/>Divirta-se!
         </p>
-        <button id="btnsortear">Sortear uma carta!</button>
-        <section id="jogador">            
-            <form id="atributos">
+        <button id="btnSortear">Sortear uma carta!</button>
+        
+        <section id="jogador" class="hide">
+            <form id="atributos">                
                 <input type="radio">Força<span id="foca"></span><br/>
-                <input type="radio">inteligência <span id="inteligencia"></span><br/>
+                <input type="radio">Inteligência <span id="inteligencia"></span><br/>
                 <input type="radio">Magia <span id="magia"></span><br/>
-                <button>Jogar!</button>
+                <button id="btnCombate">Combate!</button>
             </form>
         </section>
 
-        <section id="computador">
-
+        <section id="computador" class="hide">
+            <img id="cartaComputador" src="./img/DROGO.png" alt="">
         </section>
 
         <section id="resultado">
@@ -42,7 +44,7 @@
         </section>
     </article>
 
-    <script src="./js/logic.js"></script>
-    <script src="./js/dom.js"></script>
+    <script src="./javascript/logic.js"></script>
+    <script src="./javascript/dom.js"></script>
   </body>
 </html>

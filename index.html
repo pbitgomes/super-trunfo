@@ -14,6 +14,7 @@
         <label>Qual é o seu nome?</label>
         <input id="inputNomeJogador" type="text" placeholder="Digite o seu nome" />
         <button id="btnJogar">Jogar!</button>
+        <!-- <img src="./img/ARYA.png" alt=""> -->
       </form>
     </article>
 
@@ -26,17 +27,16 @@
         </p>
         <button id="btnSortear">Sortear uma carta!</button>
         
-        <section id="jogador" class="hide">
-            <form id="atributos">                
-                <input type="radio">Força<span id="foca"></span><br/>
-                <input type="radio">Inteligência <span id="inteligencia"></span><br/>
-                <input type="radio">Magia <span id="magia"></span><br/>
-                <button id="btnCombate">Combate!</button>
-            </form>
+        <section id="jogador">
+            <form id="atributos" class="hide">                
+                <input type="radio" name="atributo" value="forca">Força<span id="foca"></span><br/>
+                <input type="radio" name="atributo" value="inteligencia">Inteligência<span id="inteligencia"></span><br/>
+                <input type="radio" name="atributo" value="magia">Magia<span id="magia"></span><br/>
+                <button id="btnCombate" disabled="false">Combate!</button>                
+            </form>            
         </section>
 
         <section id="computador" class="hide">
-            <img id="cartaComputador" src="./img/DROGO.png" alt="">
         </section>
 
         <section id="resultado">

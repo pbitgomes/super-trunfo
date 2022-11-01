@@ -11,6 +11,7 @@ const jogador = document.getElementById("jogador");
 const cartaJogador = document.getElementById("cartaJogador");
 const nomeCarta = document.getElementById("nomeCarta")
 const atributos = document.getElementById("atributos");
+const atributosRadio = document.getElementsByName("atributo");   //--------
 const forca = document.getElementById("forca");
 const inteligencia = document.getElementById("inteligencia");
 const magia = document.getElementById("magia");
@@ -24,7 +25,6 @@ const resultado = document.getElementById("resultado");
 // informar o nome do jogador e passar para a tela do jogo
 btnJogar.addEventListener("click", (event) => {
     event.preventDefault();
-    console.log("clicou");
     if(inputNomeJogador.value === "") {
         alert("Você deve informar um nome para iniciar o jogo.")
         return
@@ -34,12 +34,16 @@ btnJogar.addEventListener("click", (event) => {
     nomeJogador.innerText = inputNomeJogador.value;
 })
 
+// sortear a carta do jogador, mostrar no board, mostrar atributos e habilitar o botão combate
+btnSortear.addEventListener("click", () => {
+    match.selecionarCartaJogador();
+    match.selecionarCartaComputador();
+    //match.selecionarAtributo();
+})
 
-
-// sortear a carta do jogador e mostrar no board
-
-    btnSortear.addEventListener("click", () => {
-        match.renderDeck();
-    })
-
-//escolher o atributo e botão jogar
+btnCombate.addEventListener("click", () => {
+    match.selecionarAtributo()
+    match.selecionarCartaComputador();
+    // verificar qual atributo foi selecionado
+    // comparar o atributo selecionado e verificar quem ganhou
+})

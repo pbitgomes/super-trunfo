@@ -5,13 +5,13 @@ const inputNomeJogador = document.getElementById("inputNomeJogador");
 const btnJogar = document.getElementById("btnJogar");
 
 const board = document.getElementById("board");
-const nomeJogador = document.getElementById("nomeJogador")
+const nomeJogador = document.getElementById("nomeJogador");
 const btnSortear = document.getElementById("btnSortear");
 const jogador = document.getElementById("jogador");
-const cartaJogador = document.getElementById("cartaJogador");
-const nomeCarta = document.getElementById("nomeCarta")
+const cartaJogador = document.getElementById("cartaJogador"); //??
+const nomeCarta = document.getElementById("nomeCarta");
 const atributos = document.getElementById("atributos");
-const atributosRadio = document.getElementsByName("atributo");   //--------
+const atributosRadio = document.getElementsByName("atributo"); //--------
 const forca = document.getElementById("forca");
 const inteligencia = document.getElementById("inteligencia");
 const magia = document.getElementById("magia");
@@ -34,15 +34,14 @@ btnJogar.addEventListener("click", (event) => {
     nomeJogador.innerText = inputNomeJogador.value;
 })
 
-// sortear a carta do jogador, mostrar no board, mostrar atributos e habilitar o botão combate
+// sortear a carta do jogador, mostrar no board, mostrar atributos
 btnSortear.addEventListener("click", () => {
     match.selecionarCartaJogador();
-    match.selecionarCartaComputador();
-    //match.selecionarAtributo();
 })
 
-btnCombate.addEventListener("click", () => {
-    match.selecionarAtributo()
+btnCombate.addEventListener("click", (event) => {
+    event.preventDefault();
+    match.selecionarAtributo();
     match.selecionarCartaComputador();
     // verificar qual atributo foi selecionado
     // comparar o atributo selecionado e verificar quem ganhou

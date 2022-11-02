@@ -30,31 +30,50 @@ class SuperTrunfo {
         
         this.cartaJogador = this.deck[parseInt(Math.random() * 15)];
         this.cartaComputador = this.deck[parseInt(Math.random() * 15)];
-        // console.log(this.deck.indexOf(cartaJogador))
-        // console.log(this.deck.indexOf(cartaComputador))
     }
     
     // método para selecionar a carta do jogador
     selecionarCartaJogador() {
-        console.log("jogador", this.cartaJogador);
+        //console.log("jogador", this.cartaJogador);
         let imagemJogador = document.createElement("img");
         imagemJogador.src = this.cartaJogador.imagem;
         imagemJogador.alt = this.cartaJogador.nome;
-        jogador.appendChild(imagemJogador);
+        cartaJogador.appendChild(imagemJogador);
         atributos.className = "show";
         btnSortear.className = "hide";
     }
 
     // método para selecionar o atributo com o qual o jogador quer jogar
+    // o que fazer se um atributo não for selecionado?
     selecionarAtributo(){        
-        let atributoSelecionado
-        //verificar qual atributo foi clicado, COMO??
         for (let i = 0; i < atributosRadio.length; i++) {
             if(atributosRadio[i].checked) {
-                atributosRadio[i].value.push(atributoSelecionado);
-                console.log(atributoSelecionado);
-                btnCombate.disable = true;
+                let atributoSelecionado = atributosRadio[i].value
+                console.log(atributoSelecionado)
+                //let atributoSelecioadoJogador = this.cartaJogador.atributoSelecionado //UNDEFINED
+                console.log(this.cartaJogador) // COMO RECUPERAR O VALOR DO ATRIBUTO?
+                console.log(this.cartaComputador)
+                console.log(i)
             }
+            // if (i = 0) {
+            //     if (this.cartaJogador.forca > this.cartaComputador.forca) {
+            //         alert("Você ganhou!!!!!!")
+            //     } else if (this.cartaJogador.forca < this.cartaComputador.forca) {
+            //         alert("Você perdeu :(")
+            //     } else {alert("Você empatou com o computador.")}
+            // }
+            
+            //     } else if (i = 1) {
+            //         if (this.cartaJogador.inteligencia > this.cartaComputador.inteligencia) {
+            //             alert("Você ganhou!!!!!!")
+            //         } else {alert("Você perdeu :(")}
+            //     } else if (i = 2) {
+            //         if (this.cartaJogador.magia > this.cartaComputador.magia) {
+            //             alert("Você ganhou!!!!!!")
+            //         } else {alert("Você perdeu :(")}
+            //     }
+            // }
+            //else {alert("Um atributo deve ser selecionado.")} não funcionou :(
         }
     }
     
@@ -64,13 +83,11 @@ class SuperTrunfo {
         if (this.cartaJogador === this.cartaComputador) {
             this.cartaComputador = [this.deck[parseInt(Math.random() * Cartas.length)]]
         } 
-        console.log("computador", this.cartaComputador)
+        //console.log("computador", this.cartaComputador)
         let imagemComputador = document.createElement("img");
         imagemComputador.src = this.cartaComputador.imagem;
         imagemComputador.alt = this.cartaComputador.nome;
         computador.appendChild(imagemComputador)
     }
-
-    //comparar os atributos das cartas e verificar quem ganhou
 }
 

@@ -8,17 +8,13 @@
 body {
     background-color: #FBFBFF;
     font-family: 'Garamond', sans-serif;
-    /* background-image: url("https://upload.wikimedia.org/wikipedia/pt/thumb/a/a0/GameofThrones.png/375px-GameofThrones.png");
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat; */
 }
 
 article {
     display: flex;
-    flex-direction: column;  /* row é padrão */
-    justify-content: center; /* mover ele no eixo X */
-    align-items: center; /* mover ele no eixo Y */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
@@ -72,7 +68,6 @@ button {
     font-size: 1.2rem;
     font-weight: 600;
     border-radius: 10px;
-    /* margin: 10px 300px 10px 300px; */
 }
 
 button:hover {
@@ -96,7 +91,19 @@ article p {
 }
 
 img {
-    height: 300px;
+    height: 235px;
+    width: 180px;
     margin: 20px;
     border-radius: 15px;
+}
+
+#resultado {
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 15px;
+    background-color: #d4a373;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
 }

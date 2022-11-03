@@ -12,39 +12,34 @@
       <h1>Super Trunfo | Game of Thrones</h1>
       <form>
         <label>Qual é o seu nome?</label>
-        <input id="inputNomeJogador" type="text" placeholder="Digite o seu nome" />
+        <input
+          id="inputNomeJogador"
+          type="text"
+          placeholder="Digite o seu nome"
+        />
         <button id="btnJogar">Jogar!</button>
-        <!-- <img src="./img/ARYA.png" alt=""> -->
       </form>
     </article>
 
     <article id="board" class="hide">
-        <p>Olá, <span id="nomeJogador"></span>!</p>
-        <p>
-            Para jogar, você deve clicar no botão "Sortear uma carta!". <br/>Escolha com
-            qual atributo do personagem da carta sorteada você quer jogar e clique
-            no botão "Jogar!" <br/>Divirta-se!
-        </p>
-        <button id="btnSortear">Sortear uma carta!</button>
-        
-        <section id="cartaJogador"></section>
-        
-        <section id="jogador">
-          <form id="atributos" class="hide">
-            <input type="radio" name="atributo" value="forca">Força<span id="foca"></span><br/>
-            <input type="radio" name="atributo" value="inteligencia">Inteligência<span id="inteligencia"></span><br/>
-            <input type="radio" name="atributo" value="magia">Magia<span id="magia"></span><br/>
-            <button id="btnCombate">Combate!</button>
-          </form>          
-        </section>
+      <p>Olá, <span id="nomeJogador"></span>!</p>
+      <p id="instrucoes">
+        Para jogar, você deve clicar no botão "Sortear uma carta!". <br />Sua
+        carta será sorteada e será comparada com a carta sorteada para o
+        computador. Ganha quem tiver a carta de maior valor. <br />Divirta-se!
+      </p>
+      <button id="btnSortear">Sortear uma carta!</button>
 
-        <section id="computador" class="hide">
+      <section id="cartaJogador"></section>
 
-        </section>
+      <section id="jogador"></section>
 
-        <section id="resultado">
+      <section id="computador"></section>
 
-        </section>
+      <section id="resultado" class="hide">
+        <!-- <button id="btnJogarNovamente" onClick="window.location.reload()">Jogar novamente!</button> -->
+      </section>
+    
     </article>
 
     <script src="./javascript/logic.js"></script>

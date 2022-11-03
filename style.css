@@ -76,6 +76,10 @@ button:hover {
     cursor: pointer;
 }
 
+#btnJogarNovamente {
+    background-color: #d4a373;
+}
+
 article p {
     font-size: 1.4rem;
     text-align: center;
